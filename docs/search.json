@@ -2,7 +2,7 @@
   {
     "objectID": "TtT Slides activities.html",
     "href": "TtT Slides activities.html",
-    "title": "ChickWeight Analysis",
+    "title": "ChickWeight Exercise",
     "section": "",
     "text": "Have you ever been curious about what affects a chick’s weight? This document explores the ChickWeight dataset using R.\nThe goal is to compare chick weight across different diets and time points.\nKey steps include:\n\nLoading the dataset\n\nVisualizing growth trends\n\nSummarizing results\n\n\n\n\n\n\n\nBased on Real Data\n\n\n\nThe ChickWeight dataset in R is based on real experimental data.\n\n\n\n\nCode\nsummary(ChickWeight)\n\n\n     weight           Time           Chick     Diet   \n Min.   : 35.0   Min.   : 0.00   13     : 12   1:220  \n 1st Qu.: 63.0   1st Qu.: 4.00   9      : 12   2:120  \n Median :103.0   Median :10.00   20     : 12   3:120  \n Mean   :121.8   Mean   :10.72   10     : 12   4:118  \n 3rd Qu.:163.8   3rd Qu.:16.00   17     : 12          \n Max.   :373.0   Max.   :21.00   19     : 12          \n                                 (Other):506          \n\n\n\n\nCode\nlibrary(ggplot2)\nggplot(ChickWeight, aes(x = Time, y = weight, color = Diet)) +\n  geom_line(aes(group = Chick)) +\n  labs(title = \"Chick Growth Over Time\")\n\n\n\n\n\n\n\n\n\n\n\n\nNo chicks were harmed in the making of this lesson.\n\n\n\n\n\n\n\nMonitor growth trends over time\nCompare diets and weight gain\n\n\n\nDiet affects chick body weight. In this study, low-energy feed made fast-growing chicks lighter, while slower-growing chicks compensated by eating more (pauwels2015a?)\n(li2016?) found that broiler chicks fed a higher nutrient-density diet gained more weight and did so more efficiently."
   }
